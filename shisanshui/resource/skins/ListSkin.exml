@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.List" xmlns:e="http://ns.egret.com/eui" states="up,down" width="470" height="76">
+	<e:Image width="235" height="76"
+	         source="{data.bg1}"
+	         source.down="{data.bg2}"/>
+	<e:Image width="235.5" height="76" x="470" skewY="180"
+	         source="{data.bg1}"
+	         source.down="{data.bg2}"/>
+	<e:Image width="110" height="44" x="23" y="14" source="{data.ft1}" />
+	<e:Image width="110" height="44" x="179" y="14" source="{data.ft2}" />
+	<e:Image width="110" height="44" x="335" y="14" source="{data.ft3}" />
+</e:Skin>

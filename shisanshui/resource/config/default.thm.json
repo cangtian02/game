@@ -1,0 +1,13 @@
+{
+  "autoGenerateExmlsList": true,
+  "exmls": [
+    "resource/skins/CheckBoxSkin.exml",
+    "resource/skins/ListSkin.exml",
+    "resource/skins/RadioButtonSkin.exml"
+  ],
+  "skins": {
+    "eui.CheckBox": "skins/CheckBoxSkin.exml",
+    "eui.List": "skins/ListSkin.exml",
+    "eui.RadioButton": "skins/RadioButtonSkin.exml"
+  }
+}

@@ -1,0 +1,5 @@
+{"file":"login_sprite.png","frames":{
+"login_btn1":{"x":0,"y":0,"w":475,"h":165,"offX":0,"offY":1,"sourceW":476,"sourceH":166},
+"login_radio1":{"x":294,"y":167,"w":41,"h":41,"offX":0,"offY":0,"sourceW":41,"sourceH":41},
+"login_radio2":{"x":243,"y":167,"w":49,"h":38,"offX":0,"offY":0,"sourceW":50,"sourceH":38},
+"login_text1":{"x":0,"y":167,"w":241,"h":34,"offX":0,"offY":0,"sourceW":241,"sourceH":34}}}

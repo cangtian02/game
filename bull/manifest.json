@@ -1,0 +1,31 @@
+{
+	"initial": [
+		"libs/modules/egret/egret.js",
+		"libs/modules/egret/egret.web.js",
+		"libs/modules/game/game.js",
+		"libs/modules/tween/tween.js",
+		"libs/modules/assetsmanager/assetsmanager.js",
+		"libs/modules/socket/socket.js",
+		"libs/modules/promise/promise.js"
+	],
+	"game": [
+		"bin-debug/common/Coommon.js",
+		"bin-debug/modules/Toast.js",
+		"bin-debug/common/ResUtils.js",
+		"bin-debug/control/BetControl.js",
+		"bin-debug/control/GameControl.js",
+		"bin-debug/control/MusicControl.js",
+		"bin-debug/control/OtherControl.js",
+		"bin-debug/control/RobotControl.js",
+		"bin-debug/modules/Card.js",
+		"bin-debug/Main.js",
+		"bin-debug/tween/Award.js",
+		"bin-debug/tween/Currency.js",
+		"bin-debug/tween/Deal.js",
+		"bin-debug/tween/OpenCard.js",
+		"bin-debug/view/Bot.js",
+		"bin-debug/view/Game.js",
+		"bin-debug/view/Table.js",
+		"bin-debug/view/Top.js"
+	]
+}

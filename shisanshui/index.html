@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>十三水</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <style>
+        html, body {
+            -ms-touch-action: none;
+            background: #ffffff;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+    </style>
+
+    <!--这个标签为通过egret提供的第三方库的方式生成的 javascript 文件。删除 modules_files 标签后，库文件加载列表将不会变化，请谨慎操作！-->
+    <!--modules_files_start-->
+	<script egret="lib" src="libs/modules/egret/egret.js" src-release="libs/modules/egret/egret.min.js"></script>
+	<script egret="lib" src="libs/modules/egret/egret.web.js" src-release="libs/modules/egret/egret.web.min.js"></script>
+	<script egret="lib" src="libs/modules/game/game.js" src-release="libs/modules/game/game.min.js"></script>
+	<script egret="lib" src="libs/modules/tween/tween.js" src-release="libs/modules/tween/tween.min.js"></script>
+	<script egret="lib" src="libs/modules/res/res.js" src-release="libs/modules/res/res.min.js"></script>
+	<script egret="lib" src="libs/modules/eui/eui.js" src-release="libs/modules/eui/eui.min.js"></script>
+	<script egret="lib" src="libs/modules/socket/socket.js" src-release="libs/modules/socket/socket.min.js"></script>
+	<!--modules_files_end-->
+
+    <!--这个标签为不通过egret提供的第三方库的方式使用的 javascript 文件，请将这些文件放在libs下，但不要放在modules下面。-->
+    <!--other_libs_files_start-->
+    <script egret="lib" src="polyfill/promise.js" src-release="polyfill/promise.min.js"></script>
+    <!--other_libs_files_end-->
+
+    <!--这个标签会被替换为项目中所有的 javascript 文件。删除 game_files 标签后，项目文件加载列表将不会变化，请谨慎操作！-->
+    <!--game_files_start-->
+	<script egret="game" src="bin-debug/control/websocket/WebSocketGame.js"></script>
+	<script egret="game" src="bin-debug/common/Coommon.js"></script>
+	<script egret="game" src="bin-debug/control/websocket/WebSocketExample.js"></script>
+	<script egret="game" src="bin-debug/view/HomeView/User/HomeCardNumGroup.js"></script>
+	<script egret="game" src="bin-debug/control/home/HomeControl.js"></script>
+	<script egret="game" src="bin-debug/control/public/PublicControl.js"></script>
+	<script egret="game" src="bin-debug/control/websocket/WebSocketConfig.js"></script>
+	<script egret="game" src="bin-debug/view/ViewStart/ViewStart.js"></script>
+	<script egret="game" src="bin-debug/control/game/GameControl.js"></script>
+	<script egret="game" src="bin-debug/Main.js"></script>
+	<script egret="game" src="bin-debug/modules/Button.js"></script>
+	<script egret="game" src="bin-debug/modules/Loading.js"></script>
+	<script egret="game" src="bin-debug/modules/Modal.js"></script>
+	<script egret="game" src="bin-debug/modules/Poker.js"></script>
+	<script egret="game" src="bin-debug/modules/Toast.js"></script>
+	<script egret="game" src="bin-debug/tween/ChooseTween.js"></script>
+	<script egret="game" src="bin-debug/tween/CompareStartTween.js"></script>
+	<script egret="game" src="bin-debug/tween/CountdownTween.js"></script>
+	<script egret="game" src="bin-debug/tween/DealTween.js"></script>
+	<script egret="game" src="bin-debug/view/GameView/choose/ChooseBotView.js"></script>
+	<script egret="game" src="bin-debug/view/GameView/choose/ChooseBtnView.js"></script>
+	<script egret="game" src="bin-debug/view/GameView/choose/ChooseLeftTopView.js"></script>
+	<script egret="game" src="bin-debug/view/GameView/choose/ChoosePokerView.js"></script>
+	<script egret="game" src="bin-debug/common/ResUtils.js"></script>
+	<script egret="game" src="bin-debug/view/GameView/choose/ChooseView.js"></script>
+	<script egret="game" src="bin-debug/view/GameView/common/DissolutionAndShare.js"></script>
+	<script egret="game" src="bin-debug/view/GameView/common/ExitGame.js"></script>
+	<script egret="game" src="bin-debug/view/GameView/common/GameSetting.js"></script>
+	<script egret="game" src="bin-debug/view/GameView/common/GameTable.js"></script>
+	<script egret="game" src="bin-debug/view/GameView/common/RnoAndJnum.js"></script>
+	<script egret="game" src="bin-debug/view/GameView/compare/CompareResultTween.js"></script>
+	<script egret="game" src="bin-debug/view/GameView/compare/CompareView.js"></script>
+	<script egret="game" src="bin-debug/view/GameView/enter/GameEnter.js"></script>
+	<script egret="game" src="bin-debug/view/GameView/enter/GameUserInfo.js"></script>
+	<script egret="game" src="bin-debug/view/GameView/GameView.js"></script>
+	<script egret="game" src="bin-debug/view/GameView/ready/GameReady.js"></script>
+	<script egret="game" src="bin-debug/view/GameView/rewards/GameRewards.js"></script>
+	<script egret="game" src="bin-debug/view/GameView/rewards/GameRewardsPanel.js"></script>
+	<script egret="game" src="bin-debug/view/GameView/votedraw/GameVoteDraw.js"></script>
+	<script egret="game" src="bin-debug/view/HomeView/HomeView.js"></script>
+	<script egret="game" src="bin-debug/view/HomeView/Room/JoinRoomView.js"></script>
+	<script egret="game" src="bin-debug/view/HomeView/Room/OpenRoomView.js"></script>
+	<script egret="game" src="bin-debug/view/HomeView/Room/RoomBtnView.js"></script>
+	<script egret="game" src="bin-debug/control/game/GamePublicControl.js"></script>
+	<script egret="game" src="bin-debug/view/HomeView/User/UserBoxView.js"></script>
+	<script egret="game" src="bin-debug/view/LoginView/LoginView.js"></script>
+	<script egret="game" src="bin-debug/view/GameView/choose/ChooseRightTopView.js"></script>
+	<!--game_files_end-->
+</head>
+<body>
+
+    <div style="margin: auto;width: 100%;height: 100%;" class="egret-player"
+         data-entry-class="Main"
+         data-orientation="landscape"
+         data-scale-mode="fixedWidth"
+         data-frame-rate="30"
+         data-content-width="1280"
+         data-content-height="720"
+         data-show-paint-rect="false"
+         data-multi-fingered="2"
+         data-show-fps="false" data-show-log="false"
+         data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+    </div>
+    <script>
+        /**
+         * {
+         * "renderMode":, //引擎渲染模式，"canvas" 或者 "webgl"
+         * "audioType": 0 //使用的音频类型，0:默认，1:qq audio，2:web audio，3:audio
+         * "antialias": //WebGL模式下是否开启抗锯齿，true:开启，false:关闭，默认为false
+         * "retina": //是否基于devicePixelRatio缩放画布
+         * }
+         **/
+        egret.runEgret({renderMode:"webgl", audioType:0,antialias: true,retina: true});
+    </script>
+</body>
+</html>

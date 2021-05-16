@@ -1,0 +1,12 @@
+{"file":"banker.png","frames":{
+"tx1":{"x":216,"y":216,"w":100,"h":100,"offX":0,"offY":0,"sourceW":100,"sourceH":100},
+"tx2":{"x":108,"y":216,"w":100,"h":100,"offX":0,"offY":0,"sourceW":100,"sourceH":100},
+"tx3":{"x":0,"y":216,"w":100,"h":100,"offX":0,"offY":0,"sourceW":100,"sourceH":100},
+"tx4":{"x":324,"y":108,"w":100,"h":100,"offX":0,"offY":0,"sourceW":100,"sourceH":100},
+"tx5":{"x":216,"y":108,"w":100,"h":100,"offX":0,"offY":0,"sourceW":100,"sourceH":100},
+"tx6":{"x":108,"y":108,"w":100,"h":100,"offX":0,"offY":0,"sourceW":100,"sourceH":100},
+"tx7":{"x":0,"y":108,"w":100,"h":100,"offX":0,"offY":0,"sourceW":100,"sourceH":100},
+"tx8":{"x":324,"y":0,"w":100,"h":100,"offX":0,"offY":0,"sourceW":100,"sourceH":100},
+"tx9":{"x":216,"y":0,"w":100,"h":100,"offX":0,"offY":0,"sourceW":100,"sourceH":100},
+"tx10":{"x":108,"y":0,"w":100,"h":100,"offX":0,"offY":0,"sourceW":100,"sourceH":100},
+"tx11":{"x":0,"y":0,"w":100,"h":100,"offX":0,"offY":0,"sourceW":100,"sourceH":100}}}

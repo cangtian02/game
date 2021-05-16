@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>百人牛牛</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="full-screen" content="true" />
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+    <style>
+        html{font-size: 117.188px;}
+        html, body{background: #e5e5e5;padding: 0;border: 0;margin: 0;width: 100%;height: 100%;}
+        /* 横屏提示 */
+        .float-landscape{position: fixed;left: 0;top: 0;right: 0;bottom: 0;z-index: 99999999;background: #211e2b;color: #FFF;visibility: hidden}
+        .float-landscape .ico-landscape{display: inline-block;background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUEAAAAXBAMAAABngOBcAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAwUExURQAAAP///////////////////////////////////////////////////////////ztNBDAAAAAPdFJOUwDuzIgzqt0RIkS7Zpl3VWSj+lgAAAbeSURBVEjHpVdtaFtVGD7JTXLTpG1yO+zmNrhZJsOPQeKu3fBjJptXq1OWdFX0l0nrsH7hzUSqCGWpc3NsyjKYAwVN5w/3Y8INAwfKoHUK/aOmiEzwT8MQBiK0uWnSJm16fc/H/UiXMdkuJPfck3PPec7zPu/zniB08+tY1mxeyiDvJto8+VgYX1P06VvkT7d5lZtqeeyeaDPGJf0hy0+jO7li0Y9kOUObU8hdob2KTq46fRqS9y7EjRc+NV91Bj12UO4l24P3LnqfxdOUaVf2dvB5pmISTEEXOhREcyO0X5D74buTIOwQ8Srz1pZY44Iz6AjZEc7bJ16l9yNSnyY9SrtCLUt/14qko9QeYSAY21mVUgShd19dLg5KZKcCXZMg9IbFQfWCScAhvPYl+GjOYOAeWbYQLpDb1+EwjE1FzaWrxlohxFs08sIarij+jsIahI5grK+WVUgInTSyUQuhk7LCFwfVly1lafAVgU/NOR+A8TMmQrIfXsRT+HWmUfmZPm13P2nmJ1BA7/mNgexcaUVyKkm759dGeT4WTW1uUPiSpPx0hs4mQpoMCWKQPIxj4DnzneNYmfgDCF+RdmdaEcKVyqHxcoP0c2TTNdI9OYX820RDLp4lNBm3IZmcaR9lJyDkdFPiQ0YDS68sCHRf+Qc+lxTSeh9IkeU45TjinM8nr2bQGoQ8SsV55XrkbtKnSTtWJBqRIg4gP8dcYS50PJWzIcEPhTYI3Uv5KC/WKPM+XReYXiP9drGa6RiZ6aKU4DVTny3lk0U269msgXAul0LOCuokcoE+kApFqBJARSbQyPVe1Y4QdNPdRHzkBoT1fHS8qlKufGJZKBjj/TnkZ/wEDsr7e0hrTwXNVnYue8mas1+uzyfn6KteUZb3VaWHgd5YbgtKQe9prB33Kkgd9VIHQ3jbAkzKg7/pYiUCGzczGLbduYD26GsRdox8EI8keSNvFq0dBdKmr+AUognpVXK+BUc6kMRrukChpU7Kw3hzkiiuihEOdeBk4hX4iStvEzVJow7mguTgcIIkwGkHxLQyHI6E+C3ESDo0Wd4bHNWVNoG+dpw1/FeAQ0HIUoSeIFKZkr1gSCwgYxmukp8IhDTiQluE3u0Zijw6pmpVdd0uLCiBn1Z1YeRdM1PI9i7WLkM5cGDNx7Y+UkFqAbbpCDnLKzhYZGBo9GCqDUJDGFhuALAnQxGCMX1lDEkwdWM782pq3JHGCEGSgkjNZhQwzL5Q9zSJ5EEC5wRhAzPD2Z+fI4UKYroM4JIkq7mKq4Z6MML8hFoq5pCvKUn4t3YIu4xs9B5pWLrtBIKEzTT2hAdsx84ajI1owC9G6MfDUyRBlTr44NG6t4y9GriwVNQArXAEIVd9EPhT8Gr5pHvVt4o+xghPZEfLoEEPkDAHux24Ad8BACJsZNUCOGQnhwgQKuoUofubhvSLiMuhSwFiZpuQnhrhh3+bWDd6Bwq4uwp5G4N1LoYjluvy5bA4vI0kOVc/lcZuQKqLu54AY3wP4bLJ/z6N0GHgLwaqGuAz3vMtCAV8bWaWBDLUzNzXkIoM6/Klx5eJVO+FuVZR9/NYWXwDyCFpWhxcRon12FmI4hyA8AtkO4KQcsgtx3b9BY4N7usJ+hYS5ShSQNFsXB5icQ7uA7Fkd/NmpwiXrkl9rIhCSvUi5qhe4cxTlTMiEZxrOyrWjFqruZe9RBhj/gpSCm4c6hIppYlCquBnRULMuoiFdeniSVBuOTyDfNoWQvPpRRPhJ/AZxizVsv41CP9F6G9mKjXTVZDQfUAXWJQ9q5iHH4hzFVd4AdyTIuxxLrHZXFWu0bVDCxeAbmGjI3gqFIsmQjS5eoyVzuo5OcsTfeDS7S0RRdqg4OWOTeN62HKl4i4WWd/WFflZhrCXHCNo5iSivXsXSUaA4AruyugqQzgcePXygp+soXk2ePAprmvKJ6xzBJ1Lsag6Q7etmRVWx15oAP6QFOiUvRqzM4VvTfGbneKMUwYHmcIQ/srLGjLrZsQ3T3KQV0bQXNorID8ZlpkshrLuRcp5id/XZP55OMStTJZoqetWytNGPXjpAs5o46SwMY74H2v/5ww74R8xfAf8zToT2RAW3XXChBtIVUtovytCj4KpfBB1LrPMss42UIveHMt8z+qqrt9n+6cgvmZb+7B+/pb4XDK++g3zynIVG0LVdEp383UygMXEycqp4tMeepK8kcpaCBN6RsQHI4rFt3RV32SdA7SM3Yr/vDWD5G+EbkgFmhbCt5B1zuDqLW/xLJxv8FAoSO24lrEQ+tahK9hlKS5nGh1t3MH/qBPh+yVJepw9/RMO22nfb/0vevEm7/NPSCYp/Mzt4/gPhOipAZhpgckAAAAASUVORK5CYII=) no-repeat;width: 1.61rem;height: .12rem;-webkit-background-size: 100% 100%;background-size: 100% 100%;position: absolute;left: 50%;top: 50%;margin: -.06rem 0 0 -.805rem;}
+        @media(orientation:landscape){.float-landscape{visibility: visible;}}
+        /* loading */
+        .loading{width: 120px;height: 120px;position: fixed;left: 50%;top: 50%;margin: -90px 0 0 -60px;z-index: 99999998;border-radius: 5px;}
+            .loading i{display: block;width: 50px;height: 50px;margin: 10px auto;-webkit-animation: loading_rotate 1.2s linear infinite;animation: loading_rotate 1.2s linear infinite;
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%236c6c6c'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");}
+            .loading p{line-height: 50px;text-align: center;font-size: 14px;color: #7E7E7E;}
+            @keyframes loading_rotate {
+                0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+                100% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
+            }
+            @-webkit-keyframes loading_rotate {
+                0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+                100% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}
+            }
+    </style>
+</head>
+
+<body>
+    <div style="margin: auto;width: 100%;height: 100%;" class="egret-player"
+         data-entry-class="Main"
+         data-orientation="portrait"
+         data-scale-mode="fixedWidth"
+         data-frame-rate="30"
+         data-content-width="828"
+         data-content-height="1472"
+         data-multi-fingered="2"
+         data-show-fps="false" data-show-log="false"
+         data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+    </div>
+
+    <!-- 横屏提示 start -->
+    <div class="float-landscape">
+        <i class="ico-landscape"></i>
+    </div>
+    <!-- 横屏提示 end -->
+    
+    <!-- 加载loading start -->
+    <div class="loading" id="loading">
+        <i></i>
+        <p>正 在 加 载 ...</p>
+    </div>
+    <!-- 加载loading end -->
+
+    <script>
+        var loadScript = function (list, callback) {
+            var loaded = 0;
+            var loadNext = function () {
+                loadSingleScript(list[loaded], function () {
+                    loaded++;
+                    if (loaded >= list.length) {
+                        callback();
+                    }
+                    else {
+                        loadNext();
+                    }
+                })
+            };
+            loadNext();
+        };
+
+        var loadSingleScript = function (src, callback) {
+            var s = document.createElement('script');
+            s.async = false;
+            s.src = src;
+            s.addEventListener('load', function () {
+                s.parentNode.removeChild(s);
+                s.removeEventListener('load', arguments.callee, false);
+                callback();
+            }, false);
+            document.body.appendChild(s);
+        };
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', './manifest.json?v=' + Math.random(), true);
+        xhr.addEventListener("load", function () {
+            var manifest = JSON.parse(xhr.response);
+            var list = manifest.initial.concat(manifest.game);
+            loadScript(list, function () {
+                /**
+                 * {
+                 * "renderMode":, //Engine rendering mode, "canvas" or "webgl"
+                 * "audioType": 0 //Use the audio type, 0: default, 2: web audio, 3: audio
+                 * "antialias": //Whether the anti-aliasing is enabled in WebGL mode, true: on, false: off, defaults to false
+                 * "calculateCanvasScaleFactor": //a function return canvas scale factor
+                 * }
+                 **/
+                egret.runEgret({ renderMode: "webgl", audioType: 0, calculateCanvasScaleFactor:function(context) {
+                    var backingStore = context.backingStorePixelRatio ||
+                        context.webkitBackingStorePixelRatio ||
+                        context.mozBackingStorePixelRatio ||
+                        context.msBackingStorePixelRatio ||
+                        context.oBackingStorePixelRatio ||
+                        context.backingStorePixelRatio || 1;
+                    return (window.devicePixelRatio || 1) / backingStore;
+                }});
+                egret.ImageLoader.crossOrigin = "anonymous";
+            });
+        });
+        xhr.send(null);
+    </script>
+</body>
+
+</html>

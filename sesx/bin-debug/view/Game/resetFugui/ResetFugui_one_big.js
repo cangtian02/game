@@ -1,0 +1,191 @@
+var __reflect = (this && this.__reflect) || function (p, c, t) {
+    p.__class__ = c, t ? t.push(c) : t = [c], p.__types__ = p.__types__ ? t.concat(p.__types__) : t;
+};
+var __extends = this && this.__extends || function __extends(t, e) { 
+ function r() { 
+ this.constructor = t;
+}
+for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
+r.prototype = e.prototype, t.prototype = new r();
+};
+/**
+ * 编辑小富贵教育层
+ */
+var ResetFugui_one_big = (function (_super) {
+    __extends(ResetFugui_one_big, _super);
+    function ResetFugui_one_big() {
+        var _this = _super.call(this) || this;
+        if (_this.stage) {
+            _this.createView();
+        }
+        else {
+            _this.addEventListener(egret.Event.ADDED_TO_STAGE, _this.onAddToStage, _this);
+        }
+        return _this;
+    }
+    ResetFugui_one_big.prototype.onAddToStage = function (event) {
+        this.removeEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
+        this.createView();
+    };
+    ResetFugui_one_big.prototype.createView = function () {
+        this.addChild(ResetFugui_one_big.viewBox);
+        ResetFugui_one_big.viewBox.width = this.stage.stageWidth;
+        ResetFugui_one_big.viewBox.height = this.stage.stageHeight;
+        ResetFugui_one_big.viewBox.touchEnabled = true;
+        // 遮罩
+        var m_mask = Game.m_mask();
+        ResetFugui_one_big.viewBox.addChild(m_mask);
+        // 内容盒子
+        ResetFugui_one_big.viewBox.addChild(ResetFugui_one_big.modalBox);
+        ResetFugui_one_big.modalBox.width = 600;
+        ResetFugui_one_big.modalBox.height = 580;
+        ResetFugui_one_big.modalBox.x = (ResetFugui_one_big.viewBox.width - ResetFugui_one_big.modalBox.width) / 2;
+        ResetFugui_one_big.modalBox.y = (ResetFugui_one_big.viewBox.height - ResetFugui_one_big.modalBox.height) / 2;
+        // 背景
+        var bg = ResetFugui.resetFugui_one_bg();
+        ResetFugui_one_big.modalBox.addChild(bg);
+        // 关闭
+        var close_btn = createBitmapByName('reset_fugui_json.reset_fugui_2');
+        ResetFugui_one_big.modalBox.addChildAt(close_btn, 5);
+        close_btn.width = 51;
+        close_btn.height = 50;
+        close_btn.x = ResetFugui_one_big.modalBox.width - 68;
+        close_btn.y = 26;
+        close_btn.touchEnabled = true;
+        close_btn.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            BigFugui.resetBox1.x = -Game.viewBox.width;
+        }, this);
+        // 标题
+        var title = ResetFugui.resetFugui_one_title('big');
+        ResetFugui_one_big.modalBox.addChild(title);
+        // tips
+        var tips = ResetFugui.resetFugui_one_tips();
+        ResetFugui_one_big.modalBox.addChild(tips);
+        // btn
+        var btn = ResetFugui.resetFugui_one_btn();
+        ResetFugui_one_big.modalBox.addChild(btn);
+        btn.touchEnabled = true;
+        btn.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
+            window.localStorage.setItem('ResetFugui_one_big', 'Y');
+            Game.viewBox.removeChild(BigFugui.resetBox1);
+            BigFugui.resetBox2 = new ResetFugui_two_big();
+            Game.viewBox.addChild(BigFugui.resetBox2);
+        }, this);
+        this.createModal_box1();
+        this.createModal_box2();
+        this.createModal_box3();
+    };
+    ResetFugui_one_big.prototype.createModal_box1 = function () {
+        var box1 = new egret.Sprite();
+        ResetFugui_one_big.modalBox.addChild(box1);
+        box1.width = 210;
+        box1.height = 220;
+        box1.x = 70;
+        box1.y = 160;
+        for (var i = 0, len = Game.pointCNList[0].length; i < len; i++) {
+            var box = ResetFugui.item(Game.pointCNList[0][i]);
+            box1.addChild(box);
+            box.x = i * 75;
+            if (i == 1) {
+                box.swapChildren(box.$children[0], box.$children[1]);
+            }
+        }
+        for (var i = 0; i < 3; i++) {
+            var box = ResetFugui.item(Game.pointCNList[1][i]);
+            box1.addChild(box);
+            box.x = i * 75;
+            box.y = 80;
+            if (i == 0) {
+                box.swapChildren(box.$children[0], box.$children[1]);
+            }
+        }
+        for (var i = 0; i < 3; i++) {
+            var box = ResetFugui.item(Game.pointCNList[2][i]);
+            box1.addChild(box);
+            box.x = i * 75;
+            box.y = 160;
+            if (i == 2) {
+                box.swapChildren(box.$children[0], box.$children[1]);
+            }
+        }
+        for (var i = 0; i < 2; i++) {
+            var y = void 0;
+            i == 0 ? y = 70 : y = 150;
+            var shp = new egret.Shape();
+            shp.graphics.beginFill(0x483131, 1);
+            shp.graphics.drawRect(0, y, box1.width, 2);
+            shp.graphics.endFill();
+            box1.addChild(shp);
+        }
+        var shp = new egret.Shape();
+        shp.graphics.lineStyle(2, 0xE5BC94);
+        shp.graphics.moveTo(90, 50);
+        shp.graphics.lineTo(45, 90);
+        shp.graphics.lineTo(45, 120);
+        shp.graphics.lineTo(160, 180);
+        shp.graphics.endFill();
+        box1.addChild(shp);
+    };
+    ResetFugui_one_big.prototype.createModal_box2 = function () {
+        var box = new egret.Sprite();
+        ResetFugui_one_big.modalBox.addChild(box);
+        box.width = 90;
+        box.height = 30;
+        box.x = 300;
+        box.y = 230;
+        var ts = createTextFieldByName('替换');
+        box.addChild(ts);
+        ts.size = 24;
+        ts.textColor = 0xB49C83;
+        ts.width = 100;
+        ts.textAlign = 'center';
+        var shp = new egret.Shape();
+        shp.graphics.lineStyle(1, 0xB49C83);
+        shp.graphics.moveTo(0, 28);
+        shp.graphics.lineTo(90, 28);
+        shp.graphics.lineTo(84, 24);
+        shp.graphics.endFill();
+        box.addChild(shp);
+    };
+    ResetFugui_one_big.prototype.createModal_box3 = function () {
+        var box = new egret.Sprite();
+        ResetFugui_one_big.modalBox.addChild(box);
+        box.width = 136;
+        box.height = 170;
+        box.x = 410;
+        box.y = 180;
+        var viewBg = createBitmapByName('sesx_json.img_8');
+        box.addChild(viewBg);
+        viewBg.width = box.width;
+        viewBg.height = box.height;
+        var t_one = SmallFugui.textStyle(Game.pointCNList[0][Game.big[0]]);
+        box.addChild(t_one);
+        t_one.x = 60;
+        t_one.y = 7;
+        var t_two = SmallFugui.textStyle(Game.pointCNList[1][Game.big[1]]);
+        box.addChild(t_two);
+        t_two.x = 100;
+        t_two.y = 46;
+        var t_tree = SmallFugui.textStyle(Game.pointCNList[2][Game.big[2]]);
+        box.addChild(t_tree);
+        t_tree.x = 104;
+        t_tree.y = 100;
+        var beishu = createTextFieldByName('x' + Game.multiple.big);
+        box.addChild(beishu);
+        beishu.size = 22;
+        beishu.textColor = 0xEFB177;
+        beishu.width = 50;
+        beishu.height = 20;
+        beishu.verticalAlign = 'middle';
+        beishu.rotation = 45;
+        beishu.x = 72;
+        beishu.y = 46;
+    };
+    // 场景盒子
+    ResetFugui_one_big.viewBox = new egret.Sprite();
+    // 内容盒子
+    ResetFugui_one_big.modalBox = new egret.Sprite();
+    return ResetFugui_one_big;
+}(egret.DisplayObjectContainer));
+__reflect(ResetFugui_one_big.prototype, "ResetFugui_one_big");
+//# sourceMappingURL=ResetFugui_one_big.js.map

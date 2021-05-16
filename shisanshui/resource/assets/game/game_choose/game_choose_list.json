@@ -1,0 +1,10 @@
+{"file":"game_choose_list.png","frames":{
+"lable_bg":{"x":370,"y":134,"w":124,"h":52,"offX":0,"offY":0,"sourceW":124,"sourceH":52},
+"list_bg_1":{"x":132,"y":75,"w":236,"h":73,"offX":0,"offY":3,"sourceW":236,"sourceH":76},
+"list_bg_2":{"x":132,"y":0,"w":236,"h":73,"offX":0,"offY":3,"sourceW":236,"sourceH":76},
+"list_bg_3":{"x":132,"y":150,"w":229,"h":73,"offX":7,"offY":0,"sourceW":236,"sourceH":76},
+"poker_bg":{"x":370,"y":0,"w":102,"h":132,"offX":0,"offY":0,"sourceW":102,"sourceH":132},
+"poker_border":{"x":0,"y":0,"w":130,"h":162,"offX":1,"offY":1,"sourceW":132,"sourceH":164},
+"btn_1":{"x":0,"y":225,"w":180,"h":71,"offX":0,"offY":0,"sourceW":180,"sourceH":71},
+"btn_2":{"x":182,"y":225,"w":180,"h":71,"offX":0,"offY":0,"sourceW":180,"sourceH":71},
+"close":{"x":364,"y":188,"w":72,"h":77,"offX":0,"offY":0,"sourceW":73,"sourceH":78}}}
