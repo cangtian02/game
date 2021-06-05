@@ -1,0 +1,53 @@
+.game-tip {
+  position: fixed;
+  z-index: 999;
+  left: 1rem;
+  right: 1rem;
+  bottom: 0;
+  height: 19rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition-property: transform;
+  transform: translate3d(0, 100%, 0);
+}
+
+.game-tip.show {
+  transition-duration: 300ms;
+  transform: translate3d(0, 0, 0);
+}
+
+.game-tip.hide {
+  transition-duration: 300ms;
+  transform: translate3d(0, 100%, 0);
+}
+
+.game-tip-time {
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 3rem;
+  color: #73D9D9;
+}
+
+.game-tip-code {
+  min-height: 8rem;
+  max-height: 12.5rem;
+  overflow: hidden;
+  border-radius: .25rem;
+}
+
+.codeTip-hljs {
+  min-height: 8rem;
+  max-height: 12.5rem;
+  overflow: auto;
+}
+
+.game-tip-btn {
+  line-height: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #fff;
+  background: #73D9D9;
+  border-radius: .25rem;
+  margin: .5rem 0 1rem 0;
+}

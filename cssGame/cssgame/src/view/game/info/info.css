@@ -1,0 +1,56 @@
+.game-info {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition-property: transform;
+  background: #fff;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  transform: translate3d(0, 100%, 0);
+}
+
+.game-info.show {
+  transition-duration: 300ms;
+  transform: translate3d(0, 0, 0);
+}
+
+.game-info.hide {
+  transition-duration: 300ms;
+  transform: translate3d(0, 100%, 0);
+}
+
+.game-info-title {
+  line-height: 2rem;
+  text-align: center;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.game-info-content {
+  flex: 1;
+  padding: .5rem;
+  overflow-y: auto;
+}
+
+.game-info-content p {
+  margin-bottom: .2rem;
+  line-height: 1rem;
+  font-size: .7rem;
+  text-indent: 1.4rem;
+}
+
+.game-info-btn {
+  line-height: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #fff;
+  background: #73D9D9;
+  border-radius: 1rem;
+  margin: .5rem 1rem;
+}

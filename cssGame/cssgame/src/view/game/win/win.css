@@ -1,0 +1,41 @@
+.game-win {
+  position: fixed;
+  z-index: 999;
+  width: 14rem;
+  height: 9rem;
+  left: 50%;
+  top: 30%;
+  margin-left: -7rem;
+}
+
+.game-win-text {
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 2.5rem;
+  color: #73D9D9;
+}
+
+.game-win-time {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 2.5rem;
+  color: #73D9D9;
+  margin-bottom: 1rem;
+}
+
+.game-win-btns {
+  width: 14rem;
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.game-win-btns div {
+  width: 4.2rem;
+  text-align: center;
+  line-height: 2rem;
+  color: #fff;
+  border-radius: 1rem;
+  background: #73D9D9;
+}

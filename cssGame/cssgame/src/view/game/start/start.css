@@ -1,0 +1,27 @@
+.game-start {
+  position: fixed;
+  z-index: 999;
+  width: 8rem;
+  height: 8rem;
+  left: 50%;
+  top: 30%;
+  margin-left: -4rem;
+}
+
+.game-start-time {
+  font-size: 3rem;
+  text-align: center;
+  line-height: 6rem;
+  color: #73D9D9;
+}
+
+.game-start-btn {
+  width: 6rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  color: #fff;
+  border-radius: 1rem;
+  background: #73D9D9;
+  margin-left: 1rem;
+}

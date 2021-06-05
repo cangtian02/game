@@ -1,0 +1,94 @@
+.grid-box {
+  padding-bottom: 100%;
+  position: relative;
+}
+
+.grid-wrap {
+  position: absolute;
+  left: .25rem;
+  top: .25rem;
+  right: .25rem;
+  bottom: .25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #236770;
+  border-radius: .25rem;
+  overflow: hidden;
+  padding: .1rem;
+}
+
+.grid-item-win {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, .5);
+  font-size: 2rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-grird-item {
+  width: 25%;
+  height: 25%;
+  position: relative;
+}
+
+.game-grird-item div {
+  position: absolute;
+  left: .1rem;
+  top: .1rem;
+  right: .1rem;
+  bottom: .1rem;
+  background-color: #73D9D9;
+  border-radius: .25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .5rem;
+  padding: .1rem;
+  overflow: auto;
+}
+
+.game-grird-item div.small p {
+  transform: scale(.9);
+}
+
+.game-grird-item div.active {
+  background-color: #174D4D;
+  color: #fff;
+}
+
+.game-grird-item div.error {
+  background-color: rgb(139, 28, 46);
+  color: #fff;
+}
+
+.class-item {
+  height: 1.4rem;
+  margin: 0 .4rem .25rem .4rem;
+  overflow: hidden;
+}
+
+.class-item ul {
+  height: 100%;
+}
+
+.class-item-li {
+  float: left;
+  line-height: 1.4rem;
+  padding: 0 .8rem;
+  margin-right: 8px;
+  background-color: #73D9D9;
+  border-radius: .25rem;
+}
+
+.class-item-li.active {
+  background-color: #236770;
+  color: #fff;
+}

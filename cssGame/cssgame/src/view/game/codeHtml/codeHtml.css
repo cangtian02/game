@@ -1,0 +1,27 @@
+.clos-item {
+  margin: 0 .25rem .5rem .25rem;
+  border-radius: .25rem;
+  overflow: hidden;
+}
+
+.html-box {
+  min-height: 2rem;
+  padding: .5rem;
+  background: #fff;
+  box-shadow: 0 .1rem .4rem #eee;
+}
+
+.code-box {
+  min-height: 2rem;
+  max-height: 6rem;
+  background: #002B36;
+  color: #fff;
+  overflow: hidden;
+}
+
+.game-hljs {
+  min-height: 2rem;
+  max-height: 6rem;
+  border-radius: 2px;
+  overflow: auto;
+}

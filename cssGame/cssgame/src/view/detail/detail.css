@@ -1,0 +1,39 @@
+.detail {
+  padding: 0 .5rem;
+}
+
+.datail-name {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.datail-des {
+  font-size: .5rem;
+  color: #8D8D8D;
+}
+
+.datail-codeView {
+  margin: 1rem 0;
+}
+
+.detail-content {
+  font-size: .7rem;
+  line-height: 1rem;
+}
+
+.detail-btn {
+  position: fixed;
+  left: 50%;
+  bottom: 1rem;
+  z-index: 999;
+  margin-left: -3rem;
+  width: 6rem;
+  height: 2.4rem;
+  background: #73D9D9;
+  border-radius: 1.2rem;
+  text-align: center;
+  line-height: 2.4rem;
+  color: #fff;
+  font-size: .8rem;
+  box-shadow: 0 .1rem .4rem #eee;
+}

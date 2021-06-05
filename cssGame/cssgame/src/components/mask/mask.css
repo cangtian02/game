@@ -1,0 +1,21 @@
+.g-mask {
+  position: fixed;
+  z-index: 998;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #000;
+  transition-property: opacity;
+  opacity: 0;
+}
+
+.g-mask.active {
+  opacity: .75;
+  transition-duration: 200ms;
+}
+
+.g-mask.hide {
+  opacity: 0;
+  transition-duration: 200ms;
+}

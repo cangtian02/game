@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+}
+
+html {
+  font-size: 20px;
+  font-family: sans-serif, "Microsoft YaHei", 微软雅黑;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #fff;
+  font-size: .7rem;
+  color: #343434;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+
+@media only screen and (min-width: 400px) {
+  html {
+    font-size: 21.33333333px !important;
+  }
+}
+
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 22.08px !important;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 25.6px !important;
+  }
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+a,
+a:active {
+  text-decoration: none;
+  color: #343434;
+}
+
+.app {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.app::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.app.hidden {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clamp2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /*! autoprefixer: on */
+  -webkit-line-clamp: 2;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

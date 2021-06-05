@@ -1,0 +1,47 @@
+.codeView {
+  width: 100%;
+  height: 10rem;
+  background: #fff;
+  border-radius: .25rem;
+  overflow: hidden;
+  box-shadow: 0 0 .4rem #eee;
+}
+
+.codeView-tab {
+  height: 2rem;
+  display: flex;
+  border-bottom: .1rem solid #73D9D9;
+}
+
+.codeView-tab div {
+  width: 5rem;
+  line-height: 1.9rem;
+  text-align: center;
+}
+
+.codeView-tab div.active {
+  background: #EDF5F5;
+}
+
+.codeView-content {
+  height: 7.9rem;
+}
+
+.codeView-tab-content {
+  height: 100%;
+  overflow: hidden;
+}
+
+.codeView-tab-content:first-child {
+  padding: .25rem;
+}
+
+.codeView-tab-content.none {
+  display: none;
+}
+
+.codeView-tab-content code {
+  display: block;
+  height: 7.9rem;
+  overflow: auto;
+}

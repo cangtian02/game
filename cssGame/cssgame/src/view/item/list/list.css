@@ -1,0 +1,42 @@
+.item-list-box {
+  position: absolute;
+  top: 2.4rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: .5rem;
+}
+
+.nolist {
+  margin: 3rem 0;
+  text-align: center;
+  font-size: .7rem;
+  line-height: 1.6rem;
+}
+
+.item-list {
+  margin: 0 .4rem .5rem .4rem;
+  background: #fff;
+  padding: .4rem;
+  border-radius: .25rem;
+  box-shadow: 0 0 .4rem #eee;
+}
+
+.item-list h2 {
+  font-size: .9rem;
+  line-height: 1.2rem;
+  margin-bottom: .3rem;
+}
+
+.item-list img {
+  display: block;
+  width: 100%;
+}
+
+.item-list p {
+  font-size: .5rem;
+  margin-top: .3rem;
+  color: #8D8D8D;
+}
